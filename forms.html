@@ -8,12 +8,192 @@
 </head>
 <body> 
     <h1>Photography Suggestions</h1>
-    <form name="photography-technique-suggestions" id="photography" method="get">
-        <label for="photography-technique">Please Enter Some Photography Techniques You Suggest I Try[required]:</label>
-        <input type="text" name="technique" id="photography-technique" required />
 
+    <!-- the form tag is used to create a container where all the inputs for a form must be put inside. 
+        the attributes that are required are name, id and method. 
+        name gives some descriptive information about what the form will be used for.
+         id allows us to reference tis form later in fields set and other areas of our code. 
+         method has two typical values: get and pose.
+          get is used for forms that do not ask for personal information (search bars, etc). 
+          post is used for forms that ask personal information (login and signup pages, etc.). -->
+
+    <form name="photography-technique-suggestions" id="photography" method="get">
+
+        <!-- this is a tect input. type="test", name, and id are all required attributes. 
+            the required attribute is only necessary when you want to make sure the user has to fill in the
+             in our before submitting the form.
+             the type attribute defines the type of input. the name attributes define the type of input.
+             the name attrubite defines the variable name that would be used for the input when the data gets
+             passed to the server (requires back-end scripting, which is beyond the scope of thhis course).
+             the id attribute allows us to reference the input from the label and from other parts of  our code.
+             all inputs need a label with the for attribute that links the label to the input using the input's id attribute.
+             when an input is required, it is importANT TO INCLUDE THE WORD required in the labels text-->
+
+        <label for="photography-technique">Please Enter Some Photography Techniques You Suggest I Try[required]:</label>
+
+        <input type="text" name="technique" id="photography-technique" required />
+        <br />
+        <br />
+        <fieldset form="travel-suggestion" name="travel-time">
+            <legend>
+                what times would you suggest i bring to the country you are suggesting:
+            </legend>
+
+
+
+        </fieldset>
+        <br />
+        <br />
+
+
+
+        <form name="country-select-form" id="country-select-form" method="get">
+            <label for="countrys">choose a country:</label>
+            <select name="countrys"> id="countrys">
+                <option value="Mexico">Mexico</option>
+                <option value="Poland">Poland</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Brazil">Brazil</option>
+            </select>
+            <br /><br />
+            <input type="submit" value="submit">
+        </form>
+        <label for="story">tell us your story:</label>
+
+        <textarea id="story" name="story"
+        rows="5" cols="33" >
+    </textarea>
+        
+
+
+
+
+
+        <!-- type="button"
+        <input type="button" value="click me" onclick="msg()">
+- this is a button
+        <script> function msg() {
+            alert("hello world!");
+        } 
+        </script>-->
+        <br />
+        <br />
+        
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+        <!-- type="text"
+        <form action="/action_page.php">
+            <label for="fname">First name: </label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name: </label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">-->
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <!-- the checkbox
+        <form action="/action_page.php">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label><br><br>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">-->
+            <br />
+            <br />
+
+
+       <!--this is an email input it requires type, name, and id.
+            optional attributes are minlength to define the minimum 
+            lenght enter by the user and maxlenght to define the maxiumum length enter/> 
+
+        <label for="email-address"> Please enter your E-mail Address </label>
+        
+        <input type="email" name="email" id="email-address" minlength="6" maxlength="40" >-->
+        <br />
+        <br />
+        <br />
+        <br />
+      <!-- this is the phone type thing
+        <form action="/action_page.php">
+            <label for="phone">Enter a phone number:</label><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="555-867-7309" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+            <small>Format: 555-867-7309</small><br><br>
+            <input type="reset" value="Reset">
+            <input type="submit">
+            <br />
+            <br />
+            <br />
+            <br />-->
+
+       <!-- this is a password input. 
+            type="password", name, and id are all required attributes. 
+            as always, each input needs a label with the for attribute to link the label to an input. 
+            i have commented this input our because i will not be needing a password input for this form. 
+        
         <label for="password">Please Enter Your Password:</label>
-        <input type="password" name="userPassword" id="password" />
-    </form>
+        
+        <input type="password" name="userPassword" id="password" minlength="10" /> -->
+        
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <!-- this the number type. you select a quanitity 
+        <form action="/action_page.php">
+            <label for="quantity">Quantity (between 1 and 5):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+            <input type="reset" value="Reset">
+            <input type="submit">
+            <br />
+            <br />
+            <br />
+            <br /> -->
+
+            <!-- this is the radio button thing
+            <form action="/action_page.php">
+                <p>Please select your favorite Web language:</p>
+               <input type="radio" id="html" name="fav_language" value="HTML">
+               <label for="html">HTML</label><br>
+               <input type="radio" id="css" name="fav_language" value="CSS">
+               <label for="css">CSS</label><br>
+               <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+               <label for="javascript">JavaScript</label> 
+              
+                <br>  
+              
+                <p>Please select your age:</p>
+                <input type="radio" id="age1" name="age" value="30">
+                <label for="age1">0 - 30</label><br>
+                <input type="radio" id="age2" name="age" value="60">
+                <label for="age2">31 - 60</label><br>  
+                <input type="radio" id="age3" name="age" value="100">
+                <label for="age3">61 - 100</label><br><br>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit"> -->
+
+
+                
+
+
+
+
+
+
+
+
+    </form> 
 </body>
 </html>
